@@ -19,6 +19,11 @@ public class UnsortedArrayPriorityQueue<K extends Comparable<K>, E> implements P
         public E getValue() {
             return element;
         }
+
+        @Override
+        public String toString() {
+            return "[" + key + ", " + element + "]";
+        }
     }
 
     private ArrEntry<K, E>[] array;
@@ -44,6 +49,11 @@ public class UnsortedArrayPriorityQueue<K extends Comparable<K>, E> implements P
 
     private boolean checkOutOfRange(int idx) {
         return 0 > idx || idx >= array.length;
+    }
+
+    @Override
+    public String getName() {
+        return "UnsortedArrayPriorityQueue";
     }
 
     @Override

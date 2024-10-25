@@ -18,6 +18,11 @@ public class UnsortedLinkedPriorityQueue<K extends Comparable<K>, E> implements 
         }
 
         @Override
+        public String toString() {
+            return "[" + key + ", " + value + "]";
+        }
+
+        @Override
         public E getValue() {
             return value;
         }
@@ -36,6 +41,11 @@ public class UnsortedLinkedPriorityQueue<K extends Comparable<K>, E> implements 
         head = null;
         tail = null;
         n = 0;
+    }
+
+    @Override
+    public String getName() {
+        return "UnsortedLinkedPriorityQueue";
     }
 
     @Override

@@ -1,7 +1,7 @@
 package Hw5_23001908_VuQuangNam.ex1;
 
 public class SortedLinkedPriorityQueue<K extends Comparable<K>, E> implements PriorityQueueInterface<K, E> {
-    protected class NodeEntry<K, E> implements Entry<K, E> {
+    public class NodeEntry<K, E> implements Entry<K, E> {
         private K key;
         private E value;
         private NodeEntry<K, E> next;
@@ -25,6 +25,11 @@ public class SortedLinkedPriorityQueue<K extends Comparable<K>, E> implements Pr
         public K getKey() {
             return key;
         }
+
+        @Override
+        public String toString() {
+            return "[" + key + ", " + value + "]";
+        }
     }
 
     private NodeEntry<K, E> head;
@@ -35,6 +40,11 @@ public class SortedLinkedPriorityQueue<K extends Comparable<K>, E> implements Pr
         head = null;
         tail = null;
         n = 0;
+    }
+
+    @Override
+    public String getName() {
+        return "SortedLinkedPriorityQueue";
     }
 
     @Override

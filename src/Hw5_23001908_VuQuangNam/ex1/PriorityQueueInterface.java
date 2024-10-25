@@ -12,4 +12,6 @@ public interface PriorityQueueInterface<K, E> {
     Entry<K, E> removeMin();
 
     Entry<K, E> min();
+
+    String getName();
 }

@@ -2,7 +2,7 @@ package Hw5_23001908_VuQuangNam.ex1;
 
 public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements PriorityQueueInterface<K, E> {
 
-    protected static class ArrayEntry<K, E> implements Entry<K, E> {
+    public static class ArrayEntry<K, E> implements Entry<K, E> {
         K key;
         E value;
 
@@ -20,11 +20,16 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements Pri
         public K getKey() {
             return key;
         }
+
+        @Override
+        public String toString() {
+            return "[" + key + ", " + value + "]";
+        }
     }
 
-    private ArrayEntry<K, E>[] array;
-    private int n;
-    private final int DEFAULT_SIZE = 1000;
+    protected ArrayEntry<K, E>[] array;
+    protected int n;
+    protected final int DEFAULT_SIZE = 1000;
 
     public SortedArrayPriorityQueue() {
         array = new ArrayEntry[DEFAULT_SIZE];
@@ -47,6 +52,11 @@ public class SortedArrayPriorityQueue<K extends Comparable<K>, E> implements Pri
         for (int i = n; i > idx; i--) {
             array[i] = array[i - 1];
         }
+    }
+
+    @Override
+    public String getName() {
+        return "SortedArrayPriorityQueue";
     }
 
     @Override

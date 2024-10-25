@@ -7,6 +7,7 @@ public class Test {
         pq.insert("Keyboard", 150);
         pq.insert("Monitor", 200);
 
+        System.out.println("---------" + pq.getName() + "---------");
         Entry<String, Integer> minEntry = pq.min();
         System.out.println("Min: " + minEntry.getKey() + " - Price: " + minEntry.getValue());
 
@@ -19,16 +20,9 @@ public class Test {
 
 
     public static void main(String[] args) {
-        /*System.out.println("=== Testing Unsorted Array ===");
-        test(new UnsortedArrayPriorityQueue<>());*/
-
-        System.out.println("\n=== Testing Sorted Array ===");
-        test(new SortedArrayPriorityQueue<>());
-
-        /*System.out.println("\n=== Testing Unsorted Linked ===");
-        test(new UnsortedLinkedPriorityQueue<>());*/
-
-        /*System.out.println("\n=== Testing Sorted Linked ===");
-        test(new SortedLinkedPriorityQueue<>());*/
+        //test(new UnsortedArrayPriorityQueue<>());
+        //test(new SortedArrayPriorityQueue<>());
+        //test(new UnsortedLinkedPriorityQueue<>());
+        test(new SortedLinkedPriorityQueue<>());
     }
 }
