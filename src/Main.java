@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,4 +44,6 @@ public class Main {
         return copy;
     }
 
+    public static void main(String[] args) {
+    }
 }
